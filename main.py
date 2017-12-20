@@ -53,10 +53,7 @@ def encrypt():
     rotateInput = int(request.form['rot'])
     textInput = request.form['text']
 
-    if (rotateInput == 0):
-        encryptedMessage = ""
-    else:
-        encryptedMessage = rotate_string(textInput, rotateInput)
+    encryptedMessage = rotate_string(textInput, rotateInput)
 
     return form.format(encryptedMessage)
 
